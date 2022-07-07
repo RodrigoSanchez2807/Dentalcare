@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Tiro Telugu', serif;   
+}
+
+
+/*Navigation*/
+
+.menu{
+    width: auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: o auto;
+}
+
+.link{
+    color:  #79b4d8;
+    text-decoration: none;
+}
+
+.logo img{
+    margin-top: 15px;
+    height: 50px;
+    padding-left: 90px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.item{
+    font-size: 13px;
+    margin: 15px 10px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.link:hover{
+    background-color:  #79b4d8;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.menu-toggle{
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    
+}
+
+.social{
+    display: flex;
+    padding-top: 25px;
+    padding-right: 90px;
+    list-style: none;
+    color:  #79b4d8;
+    text-decoration: none;
+}
+
+.social li a{
+    padding: 20px;
+    color: #79b4d8;
+}
+
+.social li a i{
+    font-size: 15px;
+}
+
+.social li a i:hover{
+    font-size: 20px;
+    color: #79b4d8;
+    transition: 0.2s;
+}
+
+/*------------------Navigation--------------------*/
+
+.content{
+    padding: 20px;
+    text-align: justify;
+
+}
+
+.content h1{
+    margin: 60px;
+    color: #79b4d8;
+    padding: 0px;
+    text-align: center;
+}
+.content p{
+    text-align: center;
+    padding: 10px 50px 50px;
+}
+
+/*Main content*/
+.banner{
+    padding: 100px;
+    width: auto;
+    height: 400px;
+    margin: auto;
+    background: url(images/banner.png) no-repeat center center/cover;
+    text-align: center;
+}
+
+
+
+#about{
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#about img{
+    margin-top: 10px;
+    height: 600px;
+    width: 400px;
+
+}
+
+#tratamientos{
+    padding-bottom: 10px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#tratamientos .desc{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.desc h1{
+    height: 0px;
+}
+
+.desc p{
+    padding-bottom: 60px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+}
+
+.cardIg{
+    width: 300px;
+    height: 400px;
+    background: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+}
+
+.cardIg:hover{
+    transform: scale(.9);
+}
+
+.cardIg:hover:after{
+    height: 280px;
+}
+
+.cardIg:hover .info p{
+    margin-bottom: 0px;
+    opacity: 1;
+}
+
+.cardIg:hover img{
+    transform: scale(1.25);
+}
+
+.cardIg:after{
+    width: 100%;
+    content: '';
+    left: 0px;
+    bottom: 0px;
+    height: 150px;
+    position: absolute;
+    background: linear-gradient(100deg, rgba(0,0,0,0) 0%, #79b4d8 100%);
+    z-index: 20;
+    transition: all .25s ease;
+}
+
+.cardIg img{
+    height: 100%;
+    z-index: 10;
+    transition: all .25s ease;
+}
+
+.cardIg .info{
+    z-index: 30;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.cardIg .info p{
+    font-size: .8rem;
+    opacity: 0;
+    margin-bottom: -170px;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.maps{
+    display: flex;
+    justify-content: space-between;
+}
+
+.maps h2{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive*/
+/*
+@media (max-width: 768px) {
+    
+    body{
+        padding-top: 0px;
+    }
+    
+    .head{
+        height: 60px;
+    }
+
+
+    .logo img{
+        height: 60px;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        background: #043769;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto; 
+    }
+
+    .item{
+        line-height: 70px;
+    }
+
+
+    .link:hover{
+        background: none;
+        color: black;
+    }
+    
+    .menu-toggle{
+        display: block;
+        color: #fff;
+    }
+    
+    
+}*/
